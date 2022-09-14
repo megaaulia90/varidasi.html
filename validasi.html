@@ -1,0 +1,125 @@
+1   <HTML>
+2 <HEAD>
+3 <TITLE>Biodata</TITLE>
+4 <!-This is the First Validation -->
+5
+6 <SCRIPT LANGUAGE="JavaScript">
+7 <!--
+8 function validate(){
+9 submitOK="True"
+10 x=document.form1
+11 
+12 name1=x.uname.value
+13 if (name1.length==0)
+14 {
+15 alert("Username harus disini.")
+16 submitOK="False"
+17 }
+18 else if (name1.length>20) {
+19  alert("Username tidak boleh >20 karakter.")
+20 submitOK="False"
+21 }
+22 
+23 Fname2=x.fname.value
+24 if (Fname2.length==0)
+25  {
+26  alert("Nama depan harus diisi.")
+27  submitOK="False'
+28  }
+29
+30 Lname3=x.lname.value
+31 if (Lname3.length==0)
+32  {
+33  alert("Nama belakang tidak boleh kosong.")
+34  submitOK="False"
+35  }
+36
+37
+38  //validasi radiobutton
+39  var counter=0;
+40  jk=x.gender.length;
+41  for (i=0; i < jk; i++) {
+42  if (x.gender[i].checked) counter++;
+43  }
+44
+45  if(counter==0) {alert("Pilih salah satu gender.")};
+46  //validasi radiobutton
+47
+48
+49  //validasi check box
+50  cekhobi=x.hobi.length;
+51  for (i=0; i < cekhobi; i++) {
+52  if (x.hobi[i].checked) counter++;
+53  }
+54
+55  if(counter==0) {alert("Pilih salah satu hobi.")};
+56   //validasi check box
+57
+58
+59  almt=x.alamat.value
+60  if (almt.length==0 || almt.lengt<10)
+61   {
+62   alert(Alamat harus lengkap.")
+63   submitOK="False"
+64   }
+65  Phonenum=x.phone.value
+66  if (Phoneum.length==0)
+67   {
+68   alert("Nomor telepon tidak boleh kosong.")
+69   submitOK="False"
+70   }
+71  job=x.kerja.value
+72  if (job.length==0)
+73   {
+74   alert("Isi form pekerjaan.")
+75   submitOK="False"
+76   }
+77  kesan=x.komen.value
+78  if (kesan .length==0)
+79   {
+80   alert("Silakan isi Kesan dan Pesan.")
+81   submitOK="False"
+82   }
+83
+84  // This is the Second Validation
+85  password=x.pwd.value
+86  if (password.length==0)
+87   {
+88   alert("Password harus diisi.")
+89   submitOK="False"
+90   }
+91  verifypassword=x.pwd1.value
+92  if (verifypassword.length==0)
+93   {
+94   aleret("Re-enter password harus diisi.")
+95   submitOK="False"
+96   }
+97  if (password!=verifypassword
+98  {
+99   alert(Password and Re-enter password harus sama!")
+100  submitOK="False"
+101 }
+102
+103 // This is the Third Validation
+104 emailattherate=x.email.value.indexOf("@")
+105 if (emailattherate==-1)
+106  {
+107  alert("Invalid E-mail")
+108  submitOK="False"
+109  }
+110 if (submitOK=="False")
+111  {
+112 return false
+113  }
+114 }
+115 -->
+116 </SCRIPT>
+117 </HEAD>
+118 <BODY>
+119 <font clase="isi">
+120 <h2>Curriculum Vitae</h2>
+121	Silakan isi biodata dibawah ini:</br>
+122 <FORM NAME="Form1" onSubmit="return validate()"
+123 action="thank.html" method="post">
+124 <table class="p_align" cellspacing="5">
+125 <tr>
